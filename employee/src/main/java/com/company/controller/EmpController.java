@@ -15,7 +15,7 @@ public class EmpController {
     public Employee addEmp(@RequestBody Employee employee){
         return service.saveEmp(employee);
     }
-    @PostMapping("/addEmps")
+    @PostMapping("/")
     public List<Employee> addEmps(@RequestBody List<Employee> employees){
         return service.saveEmps(employees);
     }
