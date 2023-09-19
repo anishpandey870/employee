@@ -11,7 +11,7 @@ import java.util.List;
 public class EmpController {
     @Autowired
    private EmpService service;
-    @PostMapping("/addEmp")
+    @PostMapping("/add")
     public Employee addEmp(@RequestBody Employee employee){
         return service.saveEmp(employee);
     }
@@ -19,7 +19,7 @@ public class EmpController {
     public List<Employee> addEmps(@RequestBody List<Employee> employees){
         return service.saveEmps(employees);
     }
-   @GetMapping("emp")
+   @GetMapping("/emp")
    public List<Employee> findAllEmps(){
         return service.getEmps();
    }
